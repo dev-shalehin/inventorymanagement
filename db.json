@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "productName": "Samsung Galaxy S25 Ultra",
+      "brand": "Samsung",
+      "price": 116000
+    },
+    {
+      "id": 2,
+      "productName": "Iphone 17 Pro Max",
+      "brand": "Apple",
+      "price": 150000
+    }
+  ]
+}
