@@ -4,12 +4,14 @@
       "id": 1,
       "productName": "Samsung Galaxy S25 Ultra",
       "brand": "Samsung",
+      "quantity":21,
       "price": 116000
     },
     {
       "id": 2,
       "productName": "Iphone 17 Pro Max",
       "brand": "Apple",
+      "quantity":18,
       "price": 150000
     }
   ]
