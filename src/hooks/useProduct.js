@@ -15,11 +15,5 @@ export const useProduct = () => {
     };
     getProducts();
   }, []);
-  const handledelete = (productid) => {
-    dispatch({
-      type: "DELETE",
-      payload: productid,
-    });
-  };
   return { state};
 };

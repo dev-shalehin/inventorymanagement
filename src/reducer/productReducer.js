@@ -20,6 +20,11 @@ function productReducer(state, action) {
         ...state,
         error: "Failed to fetch",
       };
+    case "ADD_PRODUCT":
+      return {
+        ...state,
+        products: [...state.products, action.data]
+      };
     default:
       return state;
   }
