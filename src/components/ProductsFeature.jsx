@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import AddProduct from "./AddProduct";
-export default function ProductsFeature() {
+export default function ProductsFeature({ pushProduct }) {
   const [productModal, setProductModal] = useState(false);
   return (
     <div>
@@ -10,7 +10,12 @@ export default function ProductsFeature() {
       >
         Add New Product
       </button>
-      {productModal && <AddProduct onClose={()=> setProductModal(false)} />}
+      {productModal && (
+        <AddProduct
+          pushProduct={pushProduct}
+          onClose={() => setProductModal(false)}
+        />
+      )}
     </div>
   );
 }

@@ -1,8 +1,7 @@
 import SingleProduct from "./SingleProduct";
 import { useProduct } from "../hooks/useProduct";
 
-export default function ProductTable() {
-  const { state } = useProduct();
+export default function ProductTable({ state }) {
   return (
     <div>
       <table>
