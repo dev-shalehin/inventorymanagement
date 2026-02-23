@@ -32,7 +32,7 @@ const AddProduct = ({ onClose, pushProduct }) => {
       price: formData.price,
     };
     pushProduct(newProduct);
-    // onClose();
+    onClose();
     setFormData({
       productName: "",
       brand: "",
