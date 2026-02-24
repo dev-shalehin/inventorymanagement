@@ -23,7 +23,7 @@ function productReducer(state, action) {
     case "ADD_PRODUCT":
       return {
         ...state,
-        products: [...state.products, action.data]
+        products: [...state.products, action.data],
       };
     default:
       return state;

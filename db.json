@@ -9,10 +9,101 @@
     },
     {
       "id": "2",
-      "productName": "Iphone 17 Pro Max",
+      "productName": "iPhone 17 Pro Max",
       "brand": "Apple",
       "quantity": 18,
       "price": 150000
+    },
+    {
+      "id": "3",
+      "productName": "Xiaomi 14 Pro",
+      "brand": "Xiaomi",
+      "quantity": 35,
+      "price": 85000
+    },
+    {
+      "id": "4",
+      "productName": "OnePlus 13",
+      "brand": "OnePlus",
+      "quantity": 27,
+      "price": 98000
+    },
+    {
+      "id": "5",
+      "productName": "Google Pixel 9 Pro",
+      "brand": "Google",
+      "quantity": 14,
+      "price": 105000
+    },
+    {
+      "id": "6",
+      "productName": "Sony Xperia 1 VI",
+      "brand": "Sony",
+      "quantity": 11,
+      "price": 112000
+    },
+    {
+      "id": "7",
+      "productName": "Oppo Find X7 Pro",
+      "brand": "Oppo",
+      "quantity": 22,
+      "price": 92000
+    },
+    {
+      "id": "8",
+      "productName": "Vivo X110 Pro",
+      "brand": "Vivo",
+      "quantity": 30,
+      "price": 88000
+    },
+    {
+      "id": "9",
+      "productName": "Realme GT 7 Pro",
+      "brand": "Realme",
+      "quantity": 40,
+      "price": 72000
+    },
+    {
+      "id": "10",
+      "productName": "Motorola Edge 50 Ultra",
+      "brand": "Motorola",
+      "quantity": 16,
+      "price": 89000
+    },
+    {
+      "id": "11",
+      "productName": "Asus ROG Phone 9",
+      "brand": "Asus",
+      "quantity": 9,
+      "price": 125000
+    },
+    {
+      "id": "12",
+      "productName": "Huawei P70 Pro",
+      "brand": "Huawei",
+      "quantity": 13,
+      "price": 99000
+    },
+    {
+      "id": "13",
+      "productName": "Nokia X50",
+      "brand": "Nokia",
+      "quantity": 25,
+      "price": 68000
+    },
+    {
+      "id": "14",
+      "productName": "Infinix Zero Ultra 2",
+      "brand": "Infinix",
+      "quantity": 45,
+      "price": 55000
+    },
+    {
+      "id": "15",
+      "productName": "Tecno Phantom X3",
+      "brand": "Tecno",
+      "quantity": 38,
+      "price": 60000
     }
   ]
 }

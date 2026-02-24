@@ -1,10 +1,9 @@
-import SingleProduct from "./SingleProduct";
-import { useProduct } from "../hooks/useProduct";
-import Buttons from "./commons/Buttons";
+import SingleProduct from "../components/SingleProduct";
 
-export default function ProductTable({ state }) {
+const SeeAllProduct = ({ state }) => {
   return (
     <div>
+      <h2>All Products</h2>
       <table>
         <thead>
           <tr className="flex justify-self-start gap-10 text-left">
@@ -26,7 +25,8 @@ export default function ProductTable({ state }) {
           ))}
         </tbody>
       </table>
-      <Buttons>View all</Buttons>
     </div>
   );
-}
+};
+
+export default SeeAllProduct;
