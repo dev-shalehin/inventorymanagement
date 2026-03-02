@@ -1,6 +1,6 @@
 import SingleProduct from "./SingleProduct";
-import { useProduct } from "../hooks/useProduct";
 import Buttons from "./commons/Buttons";
+import { Link } from "react-router";
 
 export default function ProductTable({ state }) {
   return (
@@ -11,7 +11,7 @@ export default function ProductTable({ state }) {
             <th className="w-5">SN</th>
             <th className="w-80">Product Name</th>
             <th className="w-20">Brand</th>
-            <th className="w-20">Quantity</th>
+            <th className="w-20">Stock</th>
             <th className="w-20">Sell Price</th>
           </tr>
         </thead>
@@ -26,7 +26,9 @@ export default function ProductTable({ state }) {
           ))}
         </tbody>
       </table>
-      <Buttons>View all</Buttons>
+      <Link to={"/AllProduct"}>
+        <Buttons>View all</Buttons>
+      </Link>
     </div>
   );
 }

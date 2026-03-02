@@ -1,12 +1,9 @@
-import { useRef, useState } from "react";
+import { useReducer, useRef, useState } from "react";
+import handleReducer, { initialFormState } from "../reducer/handleReducer";
 
 const AddProduct = ({ onClose, pushProduct }) => {
-  const [formData, setFormData] = useState({
-    productName: "",
-    brand: "",
-    quantity: "",
-    price: "",
-  });
+  const [formData, dispatch] = useReducer(handleReducer, initialFormState);
+
   const modalref = useRef();
 
   const closeModal = (event) => {
@@ -15,12 +12,13 @@ const AddProduct = ({ onClose, pushProduct }) => {
     }
   };
 
-  const handleNewProduct = (event) => {
+  const handleChangeInput = (event) => {
     const { name, value } = event.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+
+    dispatch({
+      type: "CHANGE_INPUT",
+      payload: { name, value },
+    });
   };
 
   const submitHandle = (e) => {
@@ -33,19 +31,13 @@ const AddProduct = ({ onClose, pushProduct }) => {
     };
     pushProduct(newProduct);
     onClose();
-    setFormData({
-      productName: "",
-      brand: "",
-      quantity: "",
-      price: "",
+    dispatch({
+      type: "RESET_FORM",
     });
   };
   const handleReset = () => {
-    setFormData({
-      productName: "",
-      brand: "",
-      quantity: "",
-      price: "",
+    dispatch({
+      type: "RESET_FORM",
     });
   };
 
@@ -65,7 +57,7 @@ const AddProduct = ({ onClose, pushProduct }) => {
               className="border w-70 h-10 rounded focus:ring-2 focus:ring-white-400 p-2"
               name="productName"
               value={formData.productName}
-              onChange={handleNewProduct}
+              onChange={handleChangeInput}
             />
             <input
               type="text"
@@ -73,7 +65,7 @@ const AddProduct = ({ onClose, pushProduct }) => {
               className="border w-40 h-10 rounded focus:ring-2 focus:ring-white-400 p-2"
               name="brand"
               value={formData.brand}
-              onChange={handleNewProduct}
+              onChange={handleChangeInput}
             />
           </div>
 
@@ -84,7 +76,7 @@ const AddProduct = ({ onClose, pushProduct }) => {
               className="border w-40 h-10 rounded focus:ring-2 focus:ring-white-400 p-2"
               name="quantity"
               value={formData.quantity}
-              onChange={handleNewProduct}
+              onChange={handleChangeInput}
             />
             <input
               type="text"
@@ -92,7 +84,7 @@ const AddProduct = ({ onClose, pushProduct }) => {
               className="border w-40 h-10 rounded focus:ring-2 focus:ring-white-400 p-2"
               name="price"
               value={formData.price}
-              onChange={handleNewProduct}
+              onChange={handleChangeInput}
             />
           </div>
 

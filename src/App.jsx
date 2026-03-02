@@ -1,15 +1,17 @@
-import React from "react";
-import AllComponents from "./components/AllComponents";
+import { BrowserRouter as Router, Routes, Route } from "react-router";
 import Home from "./screens/Home";
+import SeeAllProduct from "./screens/SeeAllProduct";
+import { useProduct } from "./hooks/useProduct";
 
 const App = () => {
+  const { state } = useProduct();
   return (
-    <>
-      <div className="bg-white w-[95vw] h-screen mx-auto my-0 rounded-2xl p-5">
-        {/* <AllComponents /> */}
-        <Home />
-      </div>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/AllProduct" element={<SeeAllProduct state={state} />} />
+      </Routes>
+    </Router>
   );
 };
 

@@ -1,6 +1,6 @@
 import { useEffect, useReducer } from "react";
 import productReducer, { initialState } from "../reducer/productReducer";
-const apiUrl = "http://localhost:3000/products";
+const apiUrl = "http://localhost:3000/products?_limit=10";
 
 export const useProduct = () => {
   const [state, dispatch] = useReducer(productReducer, initialState);
